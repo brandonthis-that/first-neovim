@@ -16,9 +16,11 @@ require("lazy").setup({
   {
     "rebelot/kanagawa.nvim",
     config = function()
-      vim.cmd.colorscheme("kanagawa-wave")
+      require("kanagawa").setup({ transparent = true })
+      vim.cmd("colorscheme kanagawa-wave")
     end,
   },
+  
   {
     "nvim-treesitter/nvim-treesitter",
     config = function()

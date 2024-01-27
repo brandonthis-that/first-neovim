@@ -1,3 +1,5 @@
 require("options")
 require("plugins")
 require("netrw")
+require("lsp-config")
+require("completions")

@@ -13,6 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  
   {
     "rebelot/kanagawa.nvim",
     config = function()
@@ -20,7 +21,20 @@ require("lazy").setup({
       vim.cmd("colorscheme kanagawa-wave")
     end,
   },
-  
+  {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  },
+  {
+          -- completion
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp",
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz_luasnip",
+        "rafamadriz/friendly-snippets",
+  },
+
   {
     "nvim-treesitter/nvim-treesitter",
     config = function()
@@ -33,7 +47,7 @@ require("lazy").setup({
         incremental_selection = {
           enable = true,
           keymaps = {
-            init_selection = "<Leader>ss", -- set to `false` to disable one of the mappings
+            init_selection = "<Leader>ss",
             node_incremental = "<Leader>si",
             scope_incremental = "<Leader>sc",
             node_decremental = "<Leader>sd",
@@ -64,4 +78,6 @@ require("lazy").setup({
   {
     "nvim-treesitter/nvim-treesitter-textobjects"
   },
+
 })
+
